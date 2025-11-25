@@ -6,6 +6,10 @@ define('DB_USER', 'root');
 define('DB_PASS', '');
 define('DB_NAME', 'gurudaya');
 
+// Define base path untuk memudahkan redirect
+define('BASE_URL', '/gurudaya/public/');
+define('ADMIN_URL', '/gurudaya/admin/');
+
 try {
     $conn = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 
@@ -31,7 +35,13 @@ function isAdmin()
 
 function redirect($url)
 {
-    header("Location: $url");
+    header("Location: " . BASE_URL . $url);
+    exit();
+}
+
+function redirectAdmin($url)
+{
+    header("Location: " . ADMIN_URL . $url);
     exit();
 }
 

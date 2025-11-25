@@ -1,5 +1,5 @@
 <?php
-require_once 'config.php';
+require_once '../config/config.php';
 
 $error = '';
 $success = '';
@@ -45,7 +45,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daftar - GuruDaya</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 
 <body>
@@ -56,7 +56,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <h1>GuruDaya</h1>
             </div>
             <div class="nav-links">
-                <a href="index.php" class="btn-home">Beranda</a>
+                <a href="../public/index.php" class="btn-home">Beranda</a>
                 <a href="login.php" class="btn-login">Masuk</a>
             </div>
         </div>
