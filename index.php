@@ -25,10 +25,10 @@ $articles_result = $conn->query($articles_query);
                 <h1>GuruDaya</h1>
             </div>
             <div class="nav-links">
-                <a href="index.php">Beranda</a>
+                <a href="index.php" class="btn-home">Beranda</a>
                 <?php if (isLoggedIn()): ?>
                     <?php if (isAdmin()): ?>
-                        <a href="admin.php">Dashboard Admin</a>
+                        <a href="admin.php" style="color: white;">Dashboard Admin</a>
                     <?php endif; ?>
                     <span>Halo, <?= htmlspecialchars($_SESSION['username']) ?></span>
                     <a href="logout.php" class="btn-logout">Keluar</a>
@@ -56,7 +56,6 @@ $articles_result = $conn->query($articles_query);
                     <?php while ($article = $articles_result->fetch_assoc()): ?>
                         <div class="article-card">
                             <div class="article-top">
-                                <div class="article-icon">⚡</div>
                                 <h3><?= htmlspecialchars($article['title']) ?></h3>
                                 <p class="article-preview">
                                     <?= htmlspecialchars(substr($article['content'], 0, 150)) ?>...
@@ -64,9 +63,9 @@ $articles_result = $conn->query($articles_query);
                             </div>
                             <div class="article-bottom">
                                 <div class="article-meta">
-                                    <span>📝 <?= htmlspecialchars($article['author']) ?></span>
+                                    <span style="color: black;">📝 <?= htmlspecialchars($article['author']) ?></span>
                                 </div>
-                                <a href="article.php?id=<?= $article['id'] ?>" class="btn-read">Baca Selengkapnya</a>
+                                <a href="article.php?id=<?= $article['id'] ?>" class="btn btn-read btn-detail">Baca Selengkapnya</a>
                             </div>
                         </div>
                     <?php endwhile; ?>
@@ -79,7 +78,7 @@ $articles_result = $conn->query($articles_query);
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 GuruDaya - Edukasi Energi Terbarukan Indonesia</p>
+            <p>&copy; 2025 GuruDaya - Edukasi Energi Terbarukan Indonesia</p>
         </div>
     </footer>
 </body>

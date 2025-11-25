@@ -19,12 +19,16 @@ body {
 
 /* Navbar */
 .navbar {
-  background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
+  background: rgba(18, 122, 64, 0.75);
+  backdrop-filter: blur(12px);
   color: white;
-  padding: 1rem 0;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  position: sticky;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  position: fixed;
   top: 0;
+  left: 0;
+  width: 100%;
   z-index: 1000;
 }
 
@@ -38,6 +42,7 @@ body {
   display: flex;
   align-items: center;
   gap: 10px;
+  text-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
 }
 
 .logo {
@@ -56,7 +61,6 @@ body {
 }
 
 .nav-links a {
-  color: white;
   text-decoration: none;
   padding: 8px 16px;
   border-radius: 5px;
@@ -65,12 +69,18 @@ body {
 
 .nav-links a:hover {
   background: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.btn-home {
+  color: white;
+  text-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
 }
 
 .btn-login,
 .btn-register {
   background: white;
-  color: #27ae60 !important;
+  color: green;
   font-weight: 600;
 }
 
@@ -81,9 +91,12 @@ body {
 
 /* Hero */
 .hero {
-  background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(GettyImages-119014359-scaled.jpg);
+  background-position: center;
+  background-size: cover;
   color: white;
-  padding: 80px 0;
+  padding: 160px 0;
   text-align: center;
 }
 
@@ -124,6 +137,7 @@ body {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s, box-shadow 0.3s;
   height: 100%;
+  border-left: green 4px solid;
 }
 
 .article-bottom {
@@ -135,11 +149,6 @@ body {
 .article-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-}
-
-.article-icon {
-  font-size: 3rem;
-  margin-bottom: 15px;
 }
 
 .article-card h3 {
@@ -161,20 +170,29 @@ body {
   margin-top: auto;
 }
 
-.btn-read {
+.btn {
   display: inline-block;
-  background: #3498db;
-  color: white;
-  padding: 10px 20px;
+  padding: 8px 14px;
+  font-size: 0.9rem;
   border-radius: 5px;
+  color: white;
   text-decoration: none;
-  transition: background 0.3s;
-  text-align: center;
-  margin-top: auto;
+  cursor: pointer;
+  border: none;
+  line-height: 1;
+}
+
+.btn-read {
+  background: #3498db;
 }
 
 .btn-read:hover {
   background: #2980b9;
+}
+
+.btn-detail {
+  color: white;
+  width: max-content;
 }
 
 .no-articles {
@@ -187,7 +205,7 @@ body {
 /* Forms */
 .form-container {
   max-width: 500px;
-  margin: 60px auto;
+  margin: 80px auto;
   background: white;
   padding: 40px;
   border-radius: 10px;
@@ -287,7 +305,7 @@ body {
   background: white;
   padding: 60px;
   border-radius: 10px;
-  margin: 40px 0;
+  margin: 80px 0;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
 }
 
@@ -349,12 +367,6 @@ body {
 
 .btn-delete {
   background: #e74c3c;
-  color: white;
-  border: none;
-  padding: 6px 12px;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 0.9rem;
 }
 
 .btn-delete:hover {
@@ -371,6 +383,7 @@ body {
   padding: 30px;
   border-radius: 10px;
   margin-bottom: 30px;
+  margin-top: 40px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -425,12 +438,6 @@ table tr:hover {
 
 .btn-edit {
   background: #f39c12;
-  color: white;
-  padding: 6px 12px;
-  border-radius: 4px;
-  text-decoration: none;
-  font-size: 0.9rem;
-  margin-right: 5px;
 }
 
 .btn-edit:hover {
@@ -442,7 +449,7 @@ footer {
   background: #2c3e50;
   color: white;
   text-align: center;
-  padding: 30px 0;
+  padding: 16px 0;
   margin-top: 60px;
 }
 

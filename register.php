@@ -56,7 +56,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <h1>GuruDaya</h1>
             </div>
             <div class="nav-links">
-                <a href="index.php">Beranda</a>
+                <a href="index.php" class="btn-home">Beranda</a>
                 <a href="login.php" class="btn-login">Masuk</a>
             </div>
         </div>

@@ -60,8 +60,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <h1>GuruDaya</h1>
             </div>
             <div class="nav-links">
-                <a href="index.php">Beranda</a>
-                <a href="admin.php">Dashboard Admin</a>
+                <a href="index.php" class="btn-home">Beranda</a>
+                <a href="admin.php" style="color: white;">Dashboard Admin</a>
                 <a href="logout.php" class="btn-logout">Keluar</a>
             </div>
         </div>

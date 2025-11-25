@@ -70,10 +70,10 @@ $comments_result = $comments_stmt->get_result();
                 <h1>GuruDaya</h1>
             </div>
             <div class="nav-links">
-                <a href="index.php">Beranda</a>
+                <a href="index.php" class="btn-home">Beranda</a>
                 <?php if (isLoggedIn()): ?>
                     <?php if (isAdmin()): ?>
-                        <a href="admin.php">Dashboard Admin</a>
+                        <a href="admin.php" style="color: white;">Dashboard Admin</a>
                     <?php endif; ?>
                     <span>Halo, <?= htmlspecialchars($_SESSION['username']) ?></span>
                     <a href="logout.php" class="btn-logout">Keluar</a>
@@ -115,7 +115,7 @@ $comments_result = $comments_stmt->get_result();
                     <div class="comment-header">
                         <span class="comment-author">👤 <?= htmlspecialchars($comment['username']) ?></span>
                         <?php if (isAdmin() || (isLoggedIn() && $_SESSION['user_id'] == $comment['user_id'])): ?>
-                            <button onclick="if(confirm('Hapus komentar ini?')) location.href='article.php?id=<?= $article_id ?>&delete_comment=<?= $comment['id'] ?>'" class="btn-delete">Hapus</button>
+                            <button onclick="if(confirm('Hapus komentar ini?')) location.href='article.php?id=<?= $article_id ?>&delete_comment=<?= $comment['id'] ?>'" class="btn btn-delete">Hapus</button>
                         <?php endif; ?>
                     </div>
                     <div class="comment-message"><?= htmlspecialchars(trim($comment['message'])) ?></div>
@@ -130,7 +130,7 @@ $comments_result = $comments_stmt->get_result();
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 GuruDaya - Edukasi Energi Terbarukan Indonesia</p>
+            <p>&copy; 2025 GuruDaya - Edukasi Energi Terbarukan Indonesia</p>
         </div>
     </footer>
 </body>

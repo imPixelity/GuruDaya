@@ -38,11 +38,11 @@ $stats_comments = $conn->query("SELECT COUNT(*) as total FROM comments")->fetch_
         <div class="container">
             <div class="nav-brand">
                 <span class="logo">🌱</span>
-                <h1>GuruDaya - Admin</h1>
+                <h1>GuruDaya</h1>
             </div>
             <div class="nav-links">
-                <a href="index.php">Beranda</a>
-                <span>Admin: <?= htmlspecialchars($_SESSION['username']) ?></span>
+                <a href="index.php" class="btn-home">Beranda</a>
+                <span>Halo, <?= htmlspecialchars($_SESSION['username']) ?></span>
                 <a href="logout.php" class="btn-logout">Keluar</a>
             </div>
         </div>
@@ -93,9 +93,9 @@ $stats_comments = $conn->query("SELECT COUNT(*) as total FROM comments")->fetch_
                                 <td><?= htmlspecialchars($article['title']) ?></td>
                                 <td><?= htmlspecialchars($article['author']) ?></td>
                                 <td>
-                                    <a href="article.php?id=<?= $article['id'] ?>" class="btn-read">Lihat</a>
-                                    <a href="edit_article.php?id=<?= $article['id'] ?>" class="btn-edit">Edit</a>
-                                    <button onclick="if(confirm('Hapus artikel ini?')) location.href='admin.php?delete=<?= $article['id'] ?>'" class="btn-delete">Hapus</button>
+                                    <a href="article.php?id=<?= $article['id'] ?>" class="btn btn-read">Lihat</a>
+                                    <a href="edit_article.php?id=<?= $article['id'] ?>" class="btn btn-edit">Edit</a>
+                                    <button onclick="if(confirm('Hapus artikel ini?')) location.href='admin.php?delete=<?= $article['id'] ?>'" class="btn btn-delete">Hapus</button>
                                 </td>
                             </tr>
                         <?php endwhile; ?>
@@ -109,7 +109,7 @@ $stats_comments = $conn->query("SELECT COUNT(*) as total FROM comments")->fetch_
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 GuruDaya - Edukasi Energi Terbarukan Indonesia</p>
+            <p>&copy; 2025 GuruDaya - Edukasi Energi Terbarukan Indonesia</p>
         </div>
     </footer>
 </body>
