@@ -249,6 +249,13 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
+.featured-logo {
+  justify-self: right;
+  align-self: center;
+  display: block;
+  width: 250px;
+}
+
 /* Search Section */
 .search-section {
   background: white;
@@ -741,6 +748,11 @@ footer {
 
   .featured-section {
     padding: 40px 20px;
+  }
+
+  .featured-logo {
+    justify-self: center;
+    width: 150px;
   }
 
   .articles-grid {

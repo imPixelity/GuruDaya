@@ -64,14 +64,14 @@ $featured_article = getFeaturedArticle();
                         </div>
                         <a href="article.php?id=<?= $featured_article['id'] ?>" class="featured-btn">Baca Selengkapnya →</a>
                     </div>
-
+                    <img class="featured-logo" src="../assets/img/energy.png" alt="">
                 </div>
             </div>
         </section>
     <?php endif; ?>
 
     <!-- Search Section -->
-    <section class="search-section">
+    <section class=" search-section">
         <h3 style="text-align: center; margin-bottom: 20px; color: #2c3e50;">🔍 Cari Artikel</h3>
         <form method="GET" action="">
             <div class="search-container">
