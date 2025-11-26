@@ -64,9 +64,7 @@ $featured_article = getFeaturedArticle();
                         </div>
                         <a href="article.php?id=<?= $featured_article['id'] ?>" class="featured-btn">Baca Selengkapnya →</a>
                     </div>
-                    <div style="font-size: 4rem; text-align: center;">
-                        ⚡
-                    </div>
+
                 </div>
             </div>
         </section>

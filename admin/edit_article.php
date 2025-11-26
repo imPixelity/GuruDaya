@@ -46,20 +46,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <?php include '../includes/navbar.php'; ?>
 
-<nav class="navbar">
-    <div class="container">
-        <div class="nav-brand">
-            <span class="logo">🌱</span>
-            <h1>GuruDaya</h1>
-        </div>
-        <div class="nav-links">
-            <a href="../public/index.php" class="btn-home">Beranda</a>
-            <a href="admin.php" style="color: white;">Dashboard Admin</a>
-            <a href="../auth/logout.php" class="btn-logout">Keluar</a>
-        </div>
-    </div>
-</nav>
-
 <div class="form-container" style="max-width: 800px;">
     <h2>Edit Artikel</h2>
 

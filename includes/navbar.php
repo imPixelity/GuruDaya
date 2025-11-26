@@ -5,7 +5,7 @@ $is_admin = isAdmin();
 <nav class="navbar">
     <div class="container">
         <div class="nav-brand">
-            <span class="logo">🌱</span>
+            <img src="../assets/img/logo_pemweb_fix.png" alt="" class="logo">
             <h1>GuruDaya</h1>
         </div>
 

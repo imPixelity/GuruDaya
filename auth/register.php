@@ -38,69 +38,48 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 ?>
-<!DOCTYPE html>
-<html lang="id">
+<?php include '../includes/header.php'; ?>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daftar - GuruDaya</title>
-    <link rel="stylesheet" href="../assets/css/style.css">
-</head>
+<?php include '../includes/navbar.php'; ?>
 
-<body>
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-brand">
-                <span class="logo">🌱</span>
-                <h1>GuruDaya</h1>
-            </div>
-            <div class="nav-links">
-                <a href="../public/index.php" class="btn-home">Beranda</a>
-                <a href="login.php" class="btn-login">Masuk</a>
-            </div>
+<div class="form-container">
+    <h2>Daftar Akun Baru</h2>
+
+    <?php if ($error): ?>
+        <div class="alert alert-error"><?= $error ?></div>
+    <?php endif; ?>
+
+    <?php if ($success): ?>
+        <div class="alert alert-success"><?= $success ?></div>
+    <?php endif; ?>
+
+    <form method="POST" action="">
+        <div class="form-group">
+            <label>Username</label>
+            <input type="text" name="username" required>
         </div>
-    </nav>
 
-    <div class="form-container">
-        <h2>Daftar Akun Baru</h2>
-
-        <?php if ($error): ?>
-            <div class="alert alert-error"><?= $error ?></div>
-        <?php endif; ?>
-
-        <?php if ($success): ?>
-            <div class="alert alert-success"><?= $success ?></div>
-        <?php endif; ?>
-
-        <form method="POST" action="">
-            <div class="form-group">
-                <label>Username</label>
-                <input type="text" name="username" required>
-            </div>
-
-            <div class="form-group">
-                <label>Email</label>
-                <input type="email" name="email" required>
-            </div>
-
-            <div class="form-group">
-                <label>Password</label>
-                <input type="password" name="password" required>
-            </div>
-
-            <div class="form-group">
-                <label>Konfirmasi Password</label>
-                <input type="password" name="confirm_password" required>
-            </div>
-
-            <button type="submit" class="btn-submit">Daftar</button>
-        </form>
-
-        <div class="text-center">
-            Sudah punya akun? <a href="login.php">Login di sini</a>
+        <div class="form-group">
+            <label>Email</label>
+            <input type="email" name="email" required>
         </div>
+
+        <div class="form-group">
+            <label>Password</label>
+            <input type="password" name="password" required>
+        </div>
+
+        <div class="form-group">
+            <label>Konfirmasi Password</label>
+            <input type="password" name="confirm_password" required>
+        </div>
+
+        <button type="submit" class="btn-submit">Daftar</button>
+    </form>
+
+    <div class="text-center">
+        Sudah punya akun? <a href="login.php">Login di sini</a>
     </div>
-</body>
+</div>
 
-</html>
+<?php include '../includes/footer.php'; ?>

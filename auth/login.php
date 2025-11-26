@@ -41,55 +41,35 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 ?>
-<!DOCTYPE html>
-<html lang="id">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - GuruDaya</title>
-    <link rel="stylesheet" href="../assets/css/style.css">
-</head>
+<?php include '../includes/header.php'; ?>
 
-<body>
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-brand">
-                <span class="logo">🌱</span>
-                <h1>GuruDaya</h1>
-            </div>
-            <div class="nav-links">
-                <a href="../public/index.php" class="btn-home">Beranda</a>
-                <a href="register.php" class="btn-register">Daftar</a>
-            </div>
+<?php include '../includes/navbar.php'; ?>
+
+<div class="form-container">
+    <h2>Login</h2>
+
+    <?php if ($error): ?>
+        <div class="alert alert-error"><?= $error ?></div>
+    <?php endif; ?>
+
+    <form method="POST" action="">
+        <div class="form-group">
+            <label>Email</label>
+            <input type="email" name="email" required>
         </div>
-    </nav>
 
-    <div class="form-container">
-        <h2>Login</h2>
-
-        <?php if ($error): ?>
-            <div class="alert alert-error"><?= $error ?></div>
-        <?php endif; ?>
-
-        <form method="POST" action="">
-            <div class="form-group">
-                <label>Email</label>
-                <input type="email" name="email" required>
-            </div>
-
-            <div class="form-group">
-                <label>Password</label>
-                <input type="password" name="password" required>
-            </div>
-
-            <button type="submit" class="btn-submit">Masuk</button>
-        </form>
-
-        <div class="text-center">
-            Belum punya akun? <a href="register.php">Daftar di sini</a>
+        <div class="form-group">
+            <label>Password</label>
+            <input type="password" name="password" required>
         </div>
+
+        <button type="submit" class="btn-submit">Masuk</button>
+    </form>
+
+    <div class="text-center">
+        Belum punya akun? <a href="register.php">Daftar di sini</a>
     </div>
-</body>
+</div>
 
-</html>
+<?php include '../includes/footer.php'; ?>
