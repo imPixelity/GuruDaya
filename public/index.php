@@ -24,6 +24,7 @@ $featured_article = getFeaturedArticle();
 
 <?php include '../includes/navbar.php'; ?>
 
+<!-- Hero Section -->
 <header class="hero">
     <div class="container">
         <h2>Edukasi Energi Terbarukan untuk Masa Depan Berkelanjutan</h2>

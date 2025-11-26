@@ -1,8 +1,8 @@
--- Database GuruDaya
+-- Gurudaya Database
 CREATE DATABASE IF NOT EXISTS gurudaya;
 USE gurudaya;
 
--- Tabel Users
+-- Users Table
 CREATE TABLE users (
     id INT AUTO_INCREMENT PRIMARY KEY,
     username VARCHAR(255) NOT NULL,
@@ -12,7 +12,7 @@ CREATE TABLE users (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
--- Tabel Articles
+-- Articles Table
 CREATE TABLE articles (
     id INT AUTO_INCREMENT PRIMARY KEY,
     title VARCHAR(255) NOT NULL,
@@ -23,7 +23,7 @@ CREATE TABLE articles (
     FOREIGN KEY (author_id) REFERENCES users(id) ON DELETE CASCADE
 );
 
--- Tabel Comments
+-- Comments Table
 CREATE TABLE comments (
     id INT AUTO_INCREMENT PRIMARY KEY,
     article_id INT NOT NULL,
@@ -34,6 +34,6 @@ CREATE TABLE comments (
     FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
 );
 
--- Insert Data Admin (password: admin123)
+-- Admin Demo (pw: admin123)
 INSERT INTO users (username, email, password, role) VALUES 
 ('Admin GuruDaya', 'admin@gurudaya.com', '$2y$10$or8LfirUMbM4akDI13izXucGW61gSOgNwTEwpeNIEP8tdMOiOAL4m', 'admin');

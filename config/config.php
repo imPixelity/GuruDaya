@@ -6,7 +6,7 @@ define('DB_USER', 'root');
 define('DB_PASS', '');
 define('DB_NAME', 'gurudaya');
 
-// Define base path untuk memudahkan redirect
+// Path for easier access
 define('BASE_URL', '/gurudaya/public/');
 define('ADMIN_URL', '/gurudaya/admin/');
 

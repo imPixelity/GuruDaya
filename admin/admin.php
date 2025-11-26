@@ -15,11 +15,11 @@ if (isset($_GET['delete']) && $_GET['delete']) {
     redirectAdmin('admin.php');
 }
 
-// Ambil semua artikel
+// Get all article
 $articles_query = "SELECT a.*, u.username as author FROM articles a JOIN users u ON a.author_id = u.id ORDER BY a.id DESC";
 $articles_result = $conn->query($articles_query);
 
-// Hitung statistik
+// Calculate statistic
 $stats_users = $conn->query("SELECT COUNT(*) as total FROM users")->fetch_assoc()['total'];
 $stats_articles = $conn->query("SELECT COUNT(*) as total FROM articles")->fetch_assoc()['total'];
 $stats_comments = $conn->query("SELECT COUNT(*) as total FROM comments")->fetch_assoc()['total'];

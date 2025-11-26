@@ -7,7 +7,7 @@ if (!isAdmin()) {
 
 $article_id = isset($_GET['id']) ? (int)$_GET['id'] : 0;
 
-// Ambil artikel
+// Get article
 $stmt = $conn->prepare("SELECT * FROM articles WHERE id = ?");
 $stmt->bind_param("i", $article_id);
 $stmt->execute();
