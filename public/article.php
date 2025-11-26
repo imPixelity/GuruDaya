@@ -12,8 +12,6 @@ if ($article_result->num_rows === 0) {
 }
 $article = $article_result->fetch_assoc();
 
-$page_title = htmlspecialchars($article['title']) . ' - GuruDaya';
-
 // Handle comment submission
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isLoggedIn()) {
     if (isset($_POST['add_comment'])) {

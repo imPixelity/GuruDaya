@@ -3,8 +3,6 @@ require_once '../config/config.php';
 require_once '../handlers/article_handlers.php';
 require_once '../handlers/statistic_handlers.php';
 
-$page_title = 'GuruDaya - Portal Energi Terbarukan';
-
 // Get search parameter
 $search = sanitize($_GET['search'] ?? '');
 

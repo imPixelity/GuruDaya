@@ -65,6 +65,7 @@ body {
   padding: 8px 16px;
   border-radius: 5px;
   transition: all 0.3s;
+  white-space: nowrap;
 }
 
 .nav-links a:hover {
@@ -87,6 +88,48 @@ body {
 .btn-logout {
   background: #e74c3c;
   color: white !important;
+}
+
+.user-greeting {
+  color: white;
+  font-size: 0.95rem;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 6px;
+  z-index: 1001;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: white;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+/* .hamburger.active span:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg);
+} */
+
+.hamburger.spin {
+  transition: transform 0.5s ease;
+}
+
+.hamburger.spin.active {
+  transform: rotate(180deg);
 }
 
 /* Hero */
@@ -144,7 +187,7 @@ body {
 .featured-section {
   background: linear-gradient(45deg, green, yellowgreen);
   color: white;
-  padding: 60px 0;
+  padding: 50px 20px;
   margin-bottom: 60px;
   border-radius: 10px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
@@ -639,9 +682,46 @@ footer {
 
 /* Responsive */
 @media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
   .nav-links {
+    position: fixed;
+    top: 54.5px;
+    left: -100%;
     flex-direction: column;
-    gap: 10px;
+    background: rgba(18, 122, 64, 0.95);
+    width: 100%;
+    text-align: center;
+    transition: left 0.3s ease;
+    gap: 15px;
+    padding: 20px 0;
+    max-height: calc(100vh - 60px);
+    overflow-y: auto;
+  }
+
+  .nav-links.active {
+    left: 0;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 12px 20px;
+    border-radius: 5px;
+  }
+
+  .user-greeting {
+    display: block;
+    padding: 12px 20px;
+  }
+
+  .nav-brand h1 {
+    font-size: 1.5rem;
+  }
+
+  .logo {
+    font-size: 1.5rem;
   }
 
   .hero h2 {
